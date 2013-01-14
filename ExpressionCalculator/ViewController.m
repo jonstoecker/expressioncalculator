@@ -40,7 +40,7 @@
 -(IBAction)inputPressed:(UIButton*)sender
 {
     [self playSound];
-    [self updateExpressionDisplay: [[sender titleLabel] text]];
+    [self updateExpressionDisplay: [[sender titleLabel] text]]; // <- this technically violates a strict interpretation of MVC...
     [self updateResultDisplay];
 }
 
@@ -169,6 +169,7 @@
 -(void)dealloc
 {
     AudioServicesDisposeSystemSoundID(clickSoundSSID);
+    [LogicModel release];
     [numberButtons release];
     [operationButtons release];
     [equalsButton release];
