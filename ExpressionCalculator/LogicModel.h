@@ -7,9 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Stack.h"
 
 @interface LogicModel : NSObject
+{
+    Stack* stack;
+}
 
-+(NSString*)calculateExpression:(NSString*)expression;
+-(NSString*)calculateExpression:(NSString*)expression isFinal:(BOOL)final;
+-(NSString*)recall;
 
 @end

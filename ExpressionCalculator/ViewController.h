@@ -20,17 +20,20 @@
     NSArray* operationButtons;
     GradientButton* equalsButton;
     
+    LogicModel* model;
+    
     SystemSoundID clickSoundSSID;
 
 @private
     BOOL showingResult;
-    NSMutableString* result;
+    NSString* result;
 }
 
 -(IBAction)inputPressed:(id)sender;
 -(IBAction)equalsPressed:(id)sender;
 -(IBAction)deletePressed:(id)sender;
 -(IBAction)clearPressed:(id)sender;
+-(IBAction)recallPressed:(id)sender;
 
 @property (nonatomic, retain) IBOutletCollection(GradientButton) NSArray* numberButtons;
 @property (nonatomic, retain) IBOutletCollection(GradientButton) NSArray* operationButtons;

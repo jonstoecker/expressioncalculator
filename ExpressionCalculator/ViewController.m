@@ -23,6 +23,18 @@
 @synthesize equalsButton;
 
 //
+//  Checks for an instance of the model and initializes
+//  if necessary.
+//
+-(LogicModel*)logicInit
+{
+    if (!model) {
+        model = [[LogicModel alloc] init];
+    }
+    return model;
+}
+
+//
 //  Adds a number/value or operator to the expression scratchpad.
 //
 -(IBAction)inputPressed:(UIButton*)sender
@@ -49,7 +61,7 @@
 {
     [self playSound];
     
-    NSString* finalResult = [LogicModel calculateExpression: [expressionDisplay text]];
+    NSString* finalResult = [[self logicInit] calculateExpression: [expressionDisplay text] isFinal:YES];
     if (!finalResult) {
         [resultDisplay setText:@"check syntax"];
     } else {
@@ -84,12 +96,22 @@
 }
 
 //
+//  Returns most recent expression calculated.
+//
+-(IBAction)recallPressed:(UIButton*)sender
+{
+    [self playSound];
+    [expressionDisplay setText:[[self logicInit] recall]];
+    [self updateResultDisplay];
+}
+
+//
 //  Accesses the model to calculate the result of the expression
 //  shown in the scratchpad.
 //
 -(void)updateResultDisplay
 {
-    result = [LogicModel calculateExpression: [expressionDisplay text]];
+    result = [[self logicInit] calculateExpression: [expressionDisplay text] isFinal:NO];
     [resultDisplay setText:result];
 }
 

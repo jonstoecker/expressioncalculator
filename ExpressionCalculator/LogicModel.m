@@ -11,19 +11,43 @@
 
 @implementation LogicModel
 
+-(LogicModel*)init
+{
+    if (self = [super init]) {
+        stack = [[Stack alloc] init];
+    }
+    return self;
+}
+
 //
 //  Performs a calculation and returns the result as an NSString value
 //  suitable for displaying in the calculator's view window.
 //
-+(NSString*)calculateExpression:(NSString *)expression
+-(NSString*)calculateExpression:(NSString*)expression isFinal:(BOOL)final
 {
     // Parser expects ** instead of ^ for exponential calculations
     // So, it's necessary to replace all instances of ^ with **
     NSString* modifiedExpression = [expression stringByReplacingOccurrencesOfString:@"^" withString:@"**"];
+    NSString* result = [[modifiedExpression numberByEvaluatingString] stringValue];
     
-    return [[modifiedExpression numberByEvaluatingString] stringValue];;
+    if (final && result)
+        [stack push:modifiedExpression];
+    
+    return result;
 }
 
+//
+//  Pulls the most recent expression from the stack and returns it.
+//
+-(NSString*)recall
+{
+    return [stack pop];
+}
 
+-(void)dealloc
+{
+    [stack release];
+    [super dealloc];
+}
 
 @end
