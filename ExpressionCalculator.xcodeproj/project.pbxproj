@@ -44,6 +44,7 @@
 		FCDCB68C16A3693D00DEDAA7 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDCB68A16A3693D00DEDAA7 /* ViewController_iPhone.xib */; };
 		FCDCB68F16A3693E00DEDAA7 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDCB68D16A3693E00DEDAA7 /* ViewController_iPad.xib */; };
 		FCDCB69716A36A4100DEDAA7 /* LogicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDCB69616A36A4000DEDAA7 /* LogicModel.m */; };
+		FCF867D616A46A9800E41EC8 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF867D516A46A9800E41EC8 /* Stack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +116,8 @@
 		FCDCB68E16A3693E00DEDAA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		FCDCB69516A36A4000DEDAA7 /* LogicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogicModel.h; sourceTree = "<group>"; };
 		FCDCB69616A36A4000DEDAA7 /* LogicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogicModel.m; sourceTree = "<group>"; };
+		FCF867D416A46A9800E41EC8 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		FCF867D516A46A9800E41EC8 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +238,8 @@
 				FCDCB68D16A3693E00DEDAA7 /* ViewController_iPad.xib */,
 				FCDCB69516A36A4000DEDAA7 /* LogicModel.h */,
 				FCDCB69616A36A4000DEDAA7 /* LogicModel.m */,
+				FCF867D416A46A9800E41EC8 /* Stack.h */,
+				FCF867D516A46A9800E41EC8 /* Stack.m */,
 				FCDCB67616A3693D00DEDAA7 /* Supporting Files */,
 			);
 			path = ExpressionCalculator;
@@ -348,6 +353,7 @@
 				FCCCB76916A408A0003BCE57 /* DDParserTypes.m in Sources */,
 				FCCCB76A16A408A0003BCE57 /* DDTypes.m in Sources */,
 				FCCCB76D16A40905003BCE57 /* NSString+DDMathParsing.m in Sources */,
+				FCF867D616A46A9800E41EC8 /* Stack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

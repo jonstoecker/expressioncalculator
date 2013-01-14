@@ -454,7 +454,7 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">%</string>
+						<string key="IBUINormalTitle">rcl</string>
 						<reference key="IBUIHighlightedTitleColor" ref="1024765149"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
@@ -1185,12 +1185,12 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">operatorPressed:</string>
+						<string key="label">recallPressed:</string>
 						<reference key="source" ref="387185106"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">2022</int>
+					<int key="connectionID">2024</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -3900,7 +3900,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">2023</int>
+			<int key="maxID">2024</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3929,6 +3929,7 @@
 						<string key="equalsPressed:">id</string>
 						<string key="inputPressed:">id</string>
 						<string key="operatorPressed:">UIButton</string>
+						<string key="recallPressed:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="clearPressed:">
@@ -3950,6 +3951,10 @@
 						<object class="IBActionInfo" key="operatorPressed:">
 							<string key="name">operatorPressed:</string>
 							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBActionInfo" key="recallPressed:">
+							<string key="name">recallPressed:</string>
+							<string key="candidateClassName">id</string>
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
