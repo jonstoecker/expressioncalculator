@@ -19,7 +19,7 @@
 {
     // Parser expects ** instead of ^ for exponential calculations
     // So, it's necessary to replace all instances of ^ with **
-    NSMutableString* modifiedExpression = [expression stringByReplacingOccurrencesOfString:@"^" withString:@"**"];
+    NSString* modifiedExpression = [expression stringByReplacingOccurrencesOfString:@"^" withString:@"**"];
     
     return [[modifiedExpression numberByEvaluatingString] stringValue];;
 }

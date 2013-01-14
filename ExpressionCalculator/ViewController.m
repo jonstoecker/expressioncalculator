@@ -79,7 +79,6 @@
 -(IBAction)clearPressed:(UIButton*)sender
 {
     [self playSound];
-    
     [expressionDisplay setText:@""];
     [resultDisplay setText:@""];
 }
@@ -97,7 +96,7 @@
 //
 //  Updates the expression scratchpad.
 //
--(void)updateExpressionDisplay:(NSString *)input
+-(void)updateExpressionDisplay:(NSString*)input
 {
     if (showingResult) {
         [expressionDisplay setText:@""];

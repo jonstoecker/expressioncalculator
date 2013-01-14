@@ -3,7 +3,7 @@
 //  Calculator
 //
 //  Created by Jonathan Stoecker on 8/15/11.
-//  Copyright 2011 JON_IS_THE_BEST.COM. All rights reserved.
+//  Copyright 2011 Jon Stoecker. All rights reserved.
 //
 
 #import "CalculatorBrain.h"
