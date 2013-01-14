@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC63184D16A39C87000ABE27 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC63184C16A39C87000ABE27 /* AudioToolbox.framework */; };
+		FC74CC0616A3BDBC002DAAC1 /* click.aiff in Resources */ = {isa = PBXBuildFile; fileRef = FC74CC0516A3BDBC002DAAC1 /* click.aiff */; };
+		FC74CC0916A3BEB5002DAAC1 /* GradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FC74CC0816A3BEB5002DAAC1 /* GradientButton.m */; };
+		FCCCB75716A408A0003BCE57 /* _DDFunctionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB72D16A408A0003BCE57 /* _DDFunctionContainer.m */; };
+		FCCCB75816A408A0003BCE57 /* _DDFunctionExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB72F16A408A0003BCE57 /* _DDFunctionExpression.m */; };
+		FCCCB75916A408A0003BCE57 /* _DDFunctionTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB73116A408A0003BCE57 /* _DDFunctionTerm.m */; };
+		FCCCB75A16A408A0003BCE57 /* _DDFunctionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB73316A408A0003BCE57 /* _DDFunctionUtilities.m */; };
+		FCCCB75B16A408A0003BCE57 /* _DDGroupTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB73516A408A0003BCE57 /* _DDGroupTerm.m */; };
+		FCCCB75C16A408A0003BCE57 /* _DDNumberExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB73716A408A0003BCE57 /* _DDNumberExpression.m */; };
+		FCCCB75D16A408A0003BCE57 /* _DDNumberTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB73916A408A0003BCE57 /* _DDNumberTerm.m */; };
+		FCCCB75E16A408A0003BCE57 /* _DDOperatorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB73B16A408A0003BCE57 /* _DDOperatorInfo.m */; };
+		FCCCB75F16A408A0003BCE57 /* _DDOperatorTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB73D16A408A0003BCE57 /* _DDOperatorTerm.m */; };
+		FCCCB76016A408A0003BCE57 /* _DDParserTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB73F16A408A0003BCE57 /* _DDParserTerm.m */; };
+		FCCCB76116A408A0003BCE57 /* _DDRewriteRule.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB74116A408A0003BCE57 /* _DDRewriteRule.m */; };
+		FCCCB76216A408A0003BCE57 /* _DDVariableExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB74316A408A0003BCE57 /* _DDVariableExpression.m */; };
+		FCCCB76316A408A0003BCE57 /* _DDVariableTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB74516A408A0003BCE57 /* _DDVariableTerm.m */; };
+		FCCCB76416A408A0003BCE57 /* DDExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB74716A408A0003BCE57 /* DDExpression.m */; };
+		FCCCB76516A408A0003BCE57 /* DDMathEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB74916A408A0003BCE57 /* DDMathEvaluator.m */; };
+		FCCCB76616A408A0003BCE57 /* DDMathStringToken.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB74E16A408A0003BCE57 /* DDMathStringToken.m */; };
+		FCCCB76716A408A0003BCE57 /* DDMathStringTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB75016A408A0003BCE57 /* DDMathStringTokenizer.m */; };
+		FCCCB76816A408A0003BCE57 /* DDParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB75216A408A0003BCE57 /* DDParser.m */; };
+		FCCCB76916A408A0003BCE57 /* DDParserTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB75416A408A0003BCE57 /* DDParserTypes.m */; };
+		FCCCB76A16A408A0003BCE57 /* DDTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB75616A408A0003BCE57 /* DDTypes.m */; };
+		FCCCB76D16A40905003BCE57 /* NSString+DDMathParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB76C16A40905003BCE57 /* NSString+DDMathParsing.m */; };
+		FCDCB67016A3693D00DEDAA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCDCB66F16A3693D00DEDAA7 /* UIKit.framework */; };
+		FCDCB67216A3693D00DEDAA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCDCB67116A3693D00DEDAA7 /* Foundation.framework */; };
+		FCDCB67416A3693D00DEDAA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCDCB67316A3693D00DEDAA7 /* CoreGraphics.framework */; };
+		FCDCB67A16A3693D00DEDAA7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCDCB67816A3693D00DEDAA7 /* InfoPlist.strings */; };
+		FCDCB67C16A3693D00DEDAA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDCB67B16A3693D00DEDAA7 /* main.m */; };
+		FCDCB68016A3693D00DEDAA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDCB67F16A3693D00DEDAA7 /* AppDelegate.m */; };
+		FCDCB68216A3693D00DEDAA7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FCDCB68116A3693D00DEDAA7 /* Default.png */; };
+		FCDCB68416A3693D00DEDAA7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCDCB68316A3693D00DEDAA7 /* Default@2x.png */; };
+		FCDCB68616A3693D00DEDAA7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCDCB68516A3693D00DEDAA7 /* Default-568h@2x.png */; };
+		FCDCB68916A3693D00DEDAA7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDCB68816A3693D00DEDAA7 /* ViewController.m */; };
+		FCDCB68C16A3693D00DEDAA7 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDCB68A16A3693D00DEDAA7 /* ViewController_iPhone.xib */; };
+		FCDCB68F16A3693E00DEDAA7 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDCB68D16A3693E00DEDAA7 /* ViewController_iPad.xib */; };
+		FCDCB69716A36A4100DEDAA7 /* LogicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDCB69616A36A4000DEDAA7 /* LogicModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FC63184C16A39C87000ABE27 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FC74CC0516A3BDBC002DAAC1 /* click.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = click.aiff; path = resources/click.aiff; sourceTree = "<group>"; };
+		FC74CC0716A3BEB5002DAAC1 /* GradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientButton.h; sourceTree = "<group>"; };
+		FC74CC0816A3BEB5002DAAC1 /* GradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientButton.m; sourceTree = "<group>"; };
+		FCCCB72C16A408A0003BCE57 /* _DDFunctionContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _DDFunctionContainer.h; path = "expression parser/_DDFunctionContainer.h"; sourceTree = "<group>"; };
+		FCCCB72D16A408A0003BCE57 /* _DDFunctionContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _DDFunctionContainer.m; path = "expression parser/_DDFunctionContainer.m"; sourceTree = "<group>"; };
+		FCCCB72E16A408A0003BCE57 /* _DDFunctionExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _DDFunctionExpression.h; path = "expression parser/_DDFunctionExpression.h"; sourceTree = "<group>"; };
+		FCCCB72F16A408A0003BCE57 /* _DDFunctionExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _DDFunctionExpression.m; path = "expression parser/_DDFunctionExpression.m"; sourceTree = "<group>"; };
+		FCCCB73016A408A0003BCE57 /* _DDFunctionTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _DDFunctionTerm.h; path = "expression parser/_DDFunctionTerm.h"; sourceTree = "<group>"; };
+		FCCCB73116A408A0003BCE57 /* _DDFunctionTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _DDFunctionTerm.m; path = "expression parser/_DDFunctionTerm.m"; sourceTree = "<group>"; };
+		FCCCB73216A408A0003BCE57 /* _DDFunctionUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _DDFunctionUtilities.h; path = "expression parser/_DDFunctionUtilities.h"; sourceTree = "<group>"; };
+		FCCCB73316A408A0003BCE57 /* _DDFunctionUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _DDFunctionUtilities.m; path = "expression parser/_DDFunctionUtilities.m"; sourceTree = "<group>"; };
+		FCCCB73416A408A0003BCE57 /* _DDGroupTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _DDGroupTerm.h; path = "expression parser/_DDGroupTerm.h"; sourceTree = "<group>"; };
+		FCCCB73516A408A0003BCE57 /* _DDGroupTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _DDGroupTerm.m; path = "expression parser/_DDGroupTerm.m"; sourceTree = "<group>"; };
+		FCCCB73616A408A0003BCE57 /* _DDNumberExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _DDNumberExpression.h; path = "expression parser/_DDNumberExpression.h"; sourceTree = "<group>"; };
+		FCCCB73716A408A0003BCE57 /* _DDNumberExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _DDNumberExpression.m; path = "expression parser/_DDNumberExpression.m"; sourceTree = "<group>"; };
+		FCCCB73816A408A0003BCE57 /* _DDNumberTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _DDNumberTerm.h; path = "expression parser/_DDNumberTerm.h"; sourceTree = "<group>"; };
+		FCCCB73916A408A0003BCE57 /* _DDNumberTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _DDNumberTerm.m; path = "expression parser/_DDNumberTerm.m"; sourceTree = "<group>"; };
+		FCCCB73A16A408A0003BCE57 /* _DDOperatorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _DDOperatorInfo.h; path = "expression parser/_DDOperatorInfo.h"; sourceTree = "<group>"; };
+		FCCCB73B16A408A0003BCE57 /* _DDOperatorInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _DDOperatorInfo.m; path = "expression parser/_DDOperatorInfo.m"; sourceTree = "<group>"; };
+		FCCCB73C16A408A0003BCE57 /* _DDOperatorTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _DDOperatorTerm.h; path = "expression parser/_DDOperatorTerm.h"; sourceTree = "<group>"; };
+		FCCCB73D16A408A0003BCE57 /* _DDOperatorTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _DDOperatorTerm.m; path = "expression parser/_DDOperatorTerm.m"; sourceTree = "<group>"; };
+		FCCCB73E16A408A0003BCE57 /* _DDParserTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _DDParserTerm.h; path = "expression parser/_DDParserTerm.h"; sourceTree = "<group>"; };
+		FCCCB73F16A408A0003BCE57 /* _DDParserTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _DDParserTerm.m; path = "expression parser/_DDParserTerm.m"; sourceTree = "<group>"; };
+		FCCCB74016A408A0003BCE57 /* _DDRewriteRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _DDRewriteRule.h; path = "expression parser/_DDRewriteRule.h"; sourceTree = "<group>"; };
+		FCCCB74116A408A0003BCE57 /* _DDRewriteRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _DDRewriteRule.m; path = "expression parser/_DDRewriteRule.m"; sourceTree = "<group>"; };
+		FCCCB74216A408A0003BCE57 /* _DDVariableExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _DDVariableExpression.h; path = "expression parser/_DDVariableExpression.h"; sourceTree = "<group>"; };
+		FCCCB74316A408A0003BCE57 /* _DDVariableExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _DDVariableExpression.m; path = "expression parser/_DDVariableExpression.m"; sourceTree = "<group>"; };
+		FCCCB74416A408A0003BCE57 /* _DDVariableTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _DDVariableTerm.h; path = "expression parser/_DDVariableTerm.h"; sourceTree = "<group>"; };
+		FCCCB74516A408A0003BCE57 /* _DDVariableTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _DDVariableTerm.m; path = "expression parser/_DDVariableTerm.m"; sourceTree = "<group>"; };
+		FCCCB74616A408A0003BCE57 /* DDExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDExpression.h; path = "expression parser/DDExpression.h"; sourceTree = "<group>"; };
+		FCCCB74716A408A0003BCE57 /* DDExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDExpression.m; path = "expression parser/DDExpression.m"; sourceTree = "<group>"; };
+		FCCCB74816A408A0003BCE57 /* DDMathEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDMathEvaluator.h; path = "expression parser/DDMathEvaluator.h"; sourceTree = "<group>"; };
+		FCCCB74916A408A0003BCE57 /* DDMathEvaluator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDMathEvaluator.m; path = "expression parser/DDMathEvaluator.m"; sourceTree = "<group>"; };
+		FCCCB74A16A408A0003BCE57 /* DDMathEvaluator+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DDMathEvaluator+Private.h"; path = "expression parser/DDMathEvaluator+Private.h"; sourceTree = "<group>"; };
+		FCCCB74B16A408A0003BCE57 /* DDMathParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDMathParser.h; path = "expression parser/DDMathParser.h"; sourceTree = "<group>"; };
+		FCCCB74C16A408A0003BCE57 /* DDMathParserMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDMathParserMacros.h; path = "expression parser/DDMathParserMacros.h"; sourceTree = "<group>"; };
+		FCCCB74D16A408A0003BCE57 /* DDMathStringToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDMathStringToken.h; path = "expression parser/DDMathStringToken.h"; sourceTree = "<group>"; };
+		FCCCB74E16A408A0003BCE57 /* DDMathStringToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDMathStringToken.m; path = "expression parser/DDMathStringToken.m"; sourceTree = "<group>"; };
+		FCCCB74F16A408A0003BCE57 /* DDMathStringTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDMathStringTokenizer.h; path = "expression parser/DDMathStringTokenizer.h"; sourceTree = "<group>"; };
+		FCCCB75016A408A0003BCE57 /* DDMathStringTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDMathStringTokenizer.m; path = "expression parser/DDMathStringTokenizer.m"; sourceTree = "<group>"; };
+		FCCCB75116A408A0003BCE57 /* DDParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDParser.h; path = "expression parser/DDParser.h"; sourceTree = "<group>"; };
+		FCCCB75216A408A0003BCE57 /* DDParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDParser.m; path = "expression parser/DDParser.m"; sourceTree = "<group>"; };
+		FCCCB75316A408A0003BCE57 /* DDParserTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDParserTypes.h; path = "expression parser/DDParserTypes.h"; sourceTree = "<group>"; };
+		FCCCB75416A408A0003BCE57 /* DDParserTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDParserTypes.m; path = "expression parser/DDParserTypes.m"; sourceTree = "<group>"; };
+		FCCCB75516A408A0003BCE57 /* DDTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDTypes.h; path = "expression parser/DDTypes.h"; sourceTree = "<group>"; };
+		FCCCB75616A408A0003BCE57 /* DDTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDTypes.m; path = "expression parser/DDTypes.m"; sourceTree = "<group>"; };
+		FCCCB76B16A40905003BCE57 /* NSString+DDMathParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+DDMathParsing.h"; path = "expression parser/NSString+DDMathParsing.h"; sourceTree = "<group>"; };
+		FCCCB76C16A40905003BCE57 /* NSString+DDMathParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+DDMathParsing.m"; path = "expression parser/NSString+DDMathParsing.m"; sourceTree = "<group>"; };
+		FCDCB66B16A3693D00DEDAA7 /* ExpressionCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpressionCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCDCB66F16A3693D00DEDAA7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FCDCB67116A3693D00DEDAA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FCDCB67316A3693D00DEDAA7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FCDCB67716A3693D00DEDAA7 /* ExpressionCalculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExpressionCalculator-Info.plist"; sourceTree = "<group>"; };
+		FCDCB67916A3693D00DEDAA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FCDCB67B16A3693D00DEDAA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FCDCB67D16A3693D00DEDAA7 /* ExpressionCalculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExpressionCalculator-Prefix.pch"; sourceTree = "<group>"; };
+		FCDCB67E16A3693D00DEDAA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FCDCB67F16A3693D00DEDAA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FCDCB68116A3693D00DEDAA7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		FCDCB68316A3693D00DEDAA7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		FCDCB68516A3693D00DEDAA7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FCDCB68716A3693D00DEDAA7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FCDCB68816A3693D00DEDAA7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FCDCB68B16A3693D00DEDAA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		FCDCB68E16A3693E00DEDAA7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		FCDCB69516A36A4000DEDAA7 /* LogicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogicModel.h; sourceTree = "<group>"; };
+		FCDCB69616A36A4000DEDAA7 /* LogicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogicModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCDCB66816A3693D00DEDAA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC63184D16A39C87000ABE27 /* AudioToolbox.framework in Frameworks */,
+				FCDCB67016A3693D00DEDAA7 /* UIKit.framework in Frameworks */,
+				FCDCB67216A3693D00DEDAA7 /* Foundation.framework in Frameworks */,
+				FCDCB67416A3693D00DEDAA7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC63185116A39E6A000ABE27 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC74CC0516A3BDBC002DAAC1 /* click.aiff */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		FCCCB72B16A4088D003BCE57 /* Expression Parser */ = {
+			isa = PBXGroup;
+			children = (
+				FCCCB76B16A40905003BCE57 /* NSString+DDMathParsing.h */,
+				FCCCB76C16A40905003BCE57 /* NSString+DDMathParsing.m */,
+				FCCCB72C16A408A0003BCE57 /* _DDFunctionContainer.h */,
+				FCCCB72D16A408A0003BCE57 /* _DDFunctionContainer.m */,
+				FCCCB72E16A408A0003BCE57 /* _DDFunctionExpression.h */,
+				FCCCB72F16A408A0003BCE57 /* _DDFunctionExpression.m */,
+				FCCCB73016A408A0003BCE57 /* _DDFunctionTerm.h */,
+				FCCCB73116A408A0003BCE57 /* _DDFunctionTerm.m */,
+				FCCCB73216A408A0003BCE57 /* _DDFunctionUtilities.h */,
+				FCCCB73316A408A0003BCE57 /* _DDFunctionUtilities.m */,
+				FCCCB73416A408A0003BCE57 /* _DDGroupTerm.h */,
+				FCCCB73516A408A0003BCE57 /* _DDGroupTerm.m */,
+				FCCCB73616A408A0003BCE57 /* _DDNumberExpression.h */,
+				FCCCB73716A408A0003BCE57 /* _DDNumberExpression.m */,
+				FCCCB73816A408A0003BCE57 /* _DDNumberTerm.h */,
+				FCCCB73916A408A0003BCE57 /* _DDNumberTerm.m */,
+				FCCCB73A16A408A0003BCE57 /* _DDOperatorInfo.h */,
+				FCCCB73B16A408A0003BCE57 /* _DDOperatorInfo.m */,
+				FCCCB73C16A408A0003BCE57 /* _DDOperatorTerm.h */,
+				FCCCB73D16A408A0003BCE57 /* _DDOperatorTerm.m */,
+				FCCCB73E16A408A0003BCE57 /* _DDParserTerm.h */,
+				FCCCB73F16A408A0003BCE57 /* _DDParserTerm.m */,
+				FCCCB74016A408A0003BCE57 /* _DDRewriteRule.h */,
+				FCCCB74116A408A0003BCE57 /* _DDRewriteRule.m */,
+				FCCCB74216A408A0003BCE57 /* _DDVariableExpression.h */,
+				FCCCB74316A408A0003BCE57 /* _DDVariableExpression.m */,
+				FCCCB74416A408A0003BCE57 /* _DDVariableTerm.h */,
+				FCCCB74516A408A0003BCE57 /* _DDVariableTerm.m */,
+				FCCCB74616A408A0003BCE57 /* DDExpression.h */,
+				FCCCB74716A408A0003BCE57 /* DDExpression.m */,
+				FCCCB74816A408A0003BCE57 /* DDMathEvaluator.h */,
+				FCCCB74916A408A0003BCE57 /* DDMathEvaluator.m */,
+				FCCCB74A16A408A0003BCE57 /* DDMathEvaluator+Private.h */,
+				FCCCB74B16A408A0003BCE57 /* DDMathParser.h */,
+				FCCCB74C16A408A0003BCE57 /* DDMathParserMacros.h */,
+				FCCCB74D16A408A0003BCE57 /* DDMathStringToken.h */,
+				FCCCB74E16A408A0003BCE57 /* DDMathStringToken.m */,
+				FCCCB74F16A408A0003BCE57 /* DDMathStringTokenizer.h */,
+				FCCCB75016A408A0003BCE57 /* DDMathStringTokenizer.m */,
+				FCCCB75116A408A0003BCE57 /* DDParser.h */,
+				FCCCB75216A408A0003BCE57 /* DDParser.m */,
+				FCCCB75316A408A0003BCE57 /* DDParserTypes.h */,
+				FCCCB75416A408A0003BCE57 /* DDParserTypes.m */,
+				FCCCB75516A408A0003BCE57 /* DDTypes.h */,
+				FCCCB75616A408A0003BCE57 /* DDTypes.m */,
+			);
+			name = "Expression Parser";
+			sourceTree = "<group>";
+		};
+		FCDCB66016A3693D00DEDAA7 = {
+			isa = PBXGroup;
+			children = (
+				FCDCB67516A3693D00DEDAA7 /* ExpressionCalculator */,
+				FCDCB66E16A3693D00DEDAA7 /* Frameworks */,
+				FCDCB66C16A3693D00DEDAA7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FCDCB66C16A3693D00DEDAA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCDCB66B16A3693D00DEDAA7 /* ExpressionCalculator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCDCB66E16A3693D00DEDAA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC63184C16A39C87000ABE27 /* AudioToolbox.framework */,
+				FCDCB66F16A3693D00DEDAA7 /* UIKit.framework */,
+				FCDCB67116A3693D00DEDAA7 /* Foundation.framework */,
+				FCDCB67316A3693D00DEDAA7 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FCDCB67516A3693D00DEDAA7 /* ExpressionCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				FCCCB72B16A4088D003BCE57 /* Expression Parser */,
+				FC63185116A39E6A000ABE27 /* resources */,
+				FC74CC0716A3BEB5002DAAC1 /* GradientButton.h */,
+				FC74CC0816A3BEB5002DAAC1 /* GradientButton.m */,
+				FCDCB67E16A3693D00DEDAA7 /* AppDelegate.h */,
+				FCDCB67F16A3693D00DEDAA7 /* AppDelegate.m */,
+				FCDCB68716A3693D00DEDAA7 /* ViewController.h */,
+				FCDCB68816A3693D00DEDAA7 /* ViewController.m */,
+				FCDCB68A16A3693D00DEDAA7 /* ViewController_iPhone.xib */,
+				FCDCB68D16A3693E00DEDAA7 /* ViewController_iPad.xib */,
+				FCDCB69516A36A4000DEDAA7 /* LogicModel.h */,
+				FCDCB69616A36A4000DEDAA7 /* LogicModel.m */,
+				FCDCB67616A3693D00DEDAA7 /* Supporting Files */,
+			);
+			path = ExpressionCalculator;
+			sourceTree = "<group>";
+		};
+		FCDCB67616A3693D00DEDAA7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FCDCB67716A3693D00DEDAA7 /* ExpressionCalculator-Info.plist */,
+				FCDCB67816A3693D00DEDAA7 /* InfoPlist.strings */,
+				FCDCB67B16A3693D00DEDAA7 /* main.m */,
+				FCDCB67D16A3693D00DEDAA7 /* ExpressionCalculator-Prefix.pch */,
+				FCDCB68116A3693D00DEDAA7 /* Default.png */,
+				FCDCB68316A3693D00DEDAA7 /* Default@2x.png */,
+				FCDCB68516A3693D00DEDAA7 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCDCB66A16A3693D00DEDAA7 /* ExpressionCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCDCB69216A3693E00DEDAA7 /* Build configuration list for PBXNativeTarget "ExpressionCalculator" */;
+			buildPhases = (
+				FCDCB66716A3693D00DEDAA7 /* Sources */,
+				FCDCB66816A3693D00DEDAA7 /* Frameworks */,
+				FCDCB66916A3693D00DEDAA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExpressionCalculator;
+			productName = ExpressionCalculator;
+			productReference = FCDCB66B16A3693D00DEDAA7 /* ExpressionCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCDCB66216A3693D00DEDAA7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Jon Stoecker";
+			};
+			buildConfigurationList = FCDCB66516A3693D00DEDAA7 /* Build configuration list for PBXProject "ExpressionCalculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FCDCB66016A3693D00DEDAA7;
+			productRefGroup = FCDCB66C16A3693D00DEDAA7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCDCB66A16A3693D00DEDAA7 /* ExpressionCalculator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCDCB66916A3693D00DEDAA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCDCB67A16A3693D00DEDAA7 /* InfoPlist.strings in Resources */,
+				FCDCB68216A3693D00DEDAA7 /* Default.png in Resources */,
+				FCDCB68416A3693D00DEDAA7 /* Default@2x.png in Resources */,
+				FCDCB68616A3693D00DEDAA7 /* Default-568h@2x.png in Resources */,
+				FCDCB68C16A3693D00DEDAA7 /* ViewController_iPhone.xib in Resources */,
+				FCDCB68F16A3693E00DEDAA7 /* ViewController_iPad.xib in Resources */,
+				FC74CC0616A3BDBC002DAAC1 /* click.aiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCDCB66716A3693D00DEDAA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCDCB67C16A3693D00DEDAA7 /* main.m in Sources */,
+				FCDCB68016A3693D00DEDAA7 /* AppDelegate.m in Sources */,
+				FCDCB68916A3693D00DEDAA7 /* ViewController.m in Sources */,
+				FCDCB69716A36A4100DEDAA7 /* LogicModel.m in Sources */,
+				FC74CC0916A3BEB5002DAAC1 /* GradientButton.m in Sources */,
+				FCCCB75716A408A0003BCE57 /* _DDFunctionContainer.m in Sources */,
+				FCCCB75816A408A0003BCE57 /* _DDFunctionExpression.m in Sources */,
+				FCCCB75916A408A0003BCE57 /* _DDFunctionTerm.m in Sources */,
+				FCCCB75A16A408A0003BCE57 /* _DDFunctionUtilities.m in Sources */,
+				FCCCB75B16A408A0003BCE57 /* _DDGroupTerm.m in Sources */,
+				FCCCB75C16A408A0003BCE57 /* _DDNumberExpression.m in Sources */,
+				FCCCB75D16A408A0003BCE57 /* _DDNumberTerm.m in Sources */,
+				FCCCB75E16A408A0003BCE57 /* _DDOperatorInfo.m in Sources */,
+				FCCCB75F16A408A0003BCE57 /* _DDOperatorTerm.m in Sources */,
+				FCCCB76016A408A0003BCE57 /* _DDParserTerm.m in Sources */,
+				FCCCB76116A408A0003BCE57 /* _DDRewriteRule.m in Sources */,
+				FCCCB76216A408A0003BCE57 /* _DDVariableExpression.m in Sources */,
+				FCCCB76316A408A0003BCE57 /* _DDVariableTerm.m in Sources */,
+				FCCCB76416A408A0003BCE57 /* DDExpression.m in Sources */,
+				FCCCB76516A408A0003BCE57 /* DDMathEvaluator.m in Sources */,
+				FCCCB76616A408A0003BCE57 /* DDMathStringToken.m in Sources */,
+				FCCCB76716A408A0003BCE57 /* DDMathStringTokenizer.m in Sources */,
+				FCCCB76816A408A0003BCE57 /* DDParser.m in Sources */,
+				FCCCB76916A408A0003BCE57 /* DDParserTypes.m in Sources */,
+				FCCCB76A16A408A0003BCE57 /* DDTypes.m in Sources */,
+				FCCCB76D16A40905003BCE57 /* NSString+DDMathParsing.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FCDCB67816A3693D00DEDAA7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCDCB67916A3693D00DEDAA7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FCDCB68A16A3693D00DEDAA7 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCDCB68B16A3693D00DEDAA7 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		FCDCB68D16A3693E00DEDAA7 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCDCB68E16A3693E00DEDAA7 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCDCB69016A3693E00DEDAA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FCDCB69116A3693E00DEDAA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FCDCB69316A3693E00DEDAA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ExpressionCalculator/ExpressionCalculator-Prefix.pch";
+				INFOPLIST_FILE = "ExpressionCalculator/ExpressionCalculator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FCDCB69416A3693E00DEDAA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ExpressionCalculator/ExpressionCalculator-Prefix.pch";
+				INFOPLIST_FILE = "ExpressionCalculator/ExpressionCalculator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCDCB66516A3693D00DEDAA7 /* Build configuration list for PBXProject "ExpressionCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCDCB69016A3693E00DEDAA7 /* Debug */,
+				FCDCB69116A3693E00DEDAA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCDCB69216A3693E00DEDAA7 /* Build configuration list for PBXNativeTarget "ExpressionCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCDCB69316A3693E00DEDAA7 /* Debug */,
+				FCDCB69416A3693E00DEDAA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FCDCB66216A3693D00DEDAA7 /* Project object */;
+}
