@@ -169,7 +169,7 @@
 -(void)dealloc
 {
     AudioServicesDisposeSystemSoundID(clickSoundSSID);
-    //[model release];
+    [model release];
     [numberButtons release];
     [operationButtons release];
     [equalsButton release];
