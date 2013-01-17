@@ -189,7 +189,6 @@ NSString* const JSSyntaxErrorMsg = @"syntax";
 -(void)dealloc
 {
     AudioServicesDisposeSystemSoundID(clickSoundSSID);
-    //[model release];
     [scrollView release];
     [buttonPanel release];
     [resultDisplay release];

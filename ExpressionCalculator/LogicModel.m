@@ -25,8 +25,8 @@ NSString* const JSErrorMsg = @"error";
     // Parser expects ** instead of ^ for exponential calculations and pi() instead of π
     // So, it's necessary to substitute these characters before calculating.
     NSString* modifiedExpression = [expression stringByReplacingOccurrencesOfString:@"^" withString:@"**"];
-    modifiedExpression = [expression stringByReplacingOccurrencesOfString:@"π" withString:@"pi()"];
-    modifiedExpression = [expression stringByReplacingOccurrencesOfString:@"e" withString:@"e()"];
+    modifiedExpression = [modifiedExpression stringByReplacingOccurrencesOfString:@"π" withString:@"pi()"];
+    modifiedExpression = [modifiedExpression stringByReplacingOccurrencesOfString:@"e" withString:@"e()"];
     NSString* result = [[modifiedExpression numberByEvaluatingString] stringValue];
     
     if ([result isEqualToString:@"inf"])

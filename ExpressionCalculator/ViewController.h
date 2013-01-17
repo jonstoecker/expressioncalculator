@@ -18,8 +18,6 @@
     UIScrollView* scrollView;
     UIView* buttonPanel;
     
-    LogicModel* model;
-    
     SystemSoundID clickSoundSSID;
     
 @private
