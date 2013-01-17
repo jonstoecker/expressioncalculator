@@ -7,14 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Stack.h"
 
 @interface LogicModel : NSObject
-{
 
-}
-
--(NSString*)calculateExpression:(NSString*)expression;
++(NSString*)calculateExpression:(NSString*)expression;
 
 extern NSString* const JSErrorMsg;
 

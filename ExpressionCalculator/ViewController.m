@@ -19,24 +19,15 @@
 
 @implementation ViewController
 
+@synthesize scrollView;
+@synthesize buttonPanel;
+
 //
-//  Defined message constants:
+//  Defined message constants and statics:
 //
 NSString* const JSZeroStr = @"0";
 NSString* const JSEmptyStr = @"";
 NSString* const JSSyntaxErrorMsg = @"syntax";
-
-//
-//  Checks for an instance of the model and initializes
-//  if necessary.
-//
--(LogicModel*)logic
-{
-    if (!model) {
-        model = [[LogicModel alloc] init];
-    }
-    return model;
-}
 
 //
 //  Adds a number/value or operator to the expression scratchpad.
@@ -48,7 +39,7 @@ NSString* const JSSyntaxErrorMsg = @"syntax";
         [self updateExpressionDisplayWith:JSEmptyStr];
         showingResult = NO;
     }
-    [self updateExpressionDisplayWith: [[sender titleLabel] text]]; // <- this technically violates a strict interpretation of MVC...
+    [self updateExpressionDisplayWith: [[sender titleLabel] text]];
 }
 
 //
@@ -80,7 +71,7 @@ NSString* const JSSyntaxErrorMsg = @"syntax";
         finalResult = JSZeroStr;
     }
     else {
-        finalResult = [[self logic] calculateExpression: [expressionDisplay text]];
+        finalResult = [LogicModel calculateExpression: [expressionDisplay text]];
     }
 
     if (!finalResult) {
@@ -116,12 +107,17 @@ NSString* const JSSyntaxErrorMsg = @"syntax";
 }
 
 //
-//  Loads a menu of optional operations (trig et al).
+//  Enters a function into the scratchpad.
 //
--(IBAction)optionPressed:(UIButton*)sender
+-(IBAction)functionPressed:(UIButton*)sender
 {
     [self playSound];
-    // implement the slide up option menu here
+    
+    if (showingResult) {
+        [self updateExpressionDisplayWith:JSEmptyStr];
+        showingResult = NO;
+    }
+    [self updateExpressionDisplayWith: [[[sender titleLabel] text] stringByAppendingString:@"("]];
 }
 
 //
@@ -130,10 +126,10 @@ NSString* const JSSyntaxErrorMsg = @"syntax";
 //
 -(void)updateResultDisplay
 {
-    NSString* expression = [[self logic] calculateExpression: [expressionDisplay text]];
+    NSString* expression = [LogicModel calculateExpression: [expressionDisplay text]];
     
     if (expression) {
-        [resultDisplay setText:[[self logic] calculateExpression: [expressionDisplay text]]];
+        [resultDisplay setText:[LogicModel calculateExpression: [expressionDisplay text]]];
     }
     else if ([[expressionDisplay text] isEqualToString:JSEmptyStr]){
         [resultDisplay setText:JSZeroStr];
@@ -168,11 +164,21 @@ NSString* const JSSyntaxErrorMsg = @"syntax";
     // Sound (button click) initialization.
     NSURL* clickSoundURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/click.aiff",[[NSBundle mainBundle] resourcePath]]];
     AudioServicesCreateSystemSoundID((CFURLRef) clickSoundURL, &clickSoundSSID);
+    
+    // Attach button panel to scroll view
+    CGRect frame;
+    frame.origin.x = 0;
+    frame.origin.y = 0;
+    frame.size = self.scrollView.frame.size;
+    [self.scrollView addSubview:buttonPanel];
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 2, self.scrollView.frame.size.height);
 }
 
 -(void)viewDidUnload
 {
-
+    self.scrollView = nil;
+    self.buttonPanel = nil;
+    [super viewDidUnload];
 }
 
 -(void)didReceiveMemoryWarning
@@ -183,8 +189,10 @@ NSString* const JSSyntaxErrorMsg = @"syntax";
 -(void)dealloc
 {
     AudioServicesDisposeSystemSoundID(clickSoundSSID);
-    [model release];
-
+    //[model release];
+    [scrollView release];
+    [buttonPanel release];
+    [resultDisplay release];
     [expressionDisplay release];
     [super dealloc];
 }

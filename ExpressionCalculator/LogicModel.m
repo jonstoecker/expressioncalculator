@@ -11,27 +11,22 @@
 
 @implementation LogicModel
 
--(LogicModel*)init
-{
-    return self;
-}
 //
 //  Defined constants
 //
 NSString* const JSErrorMsg = @"error";
 
-
 //
 //  Performs a calculation and returns the result as an NSString value
 //  suitable for displaying in the calculator's view window.
 //
--(NSString*)calculateExpression:(NSString*)expression
++(NSString*)calculateExpression:(NSString*)expression
 {
-    // Parser expects ** instead of ^ for exponential calculations and * instead of x for multiplication
+    // Parser expects ** instead of ^ for exponential calculations and pi() instead of π
     // So, it's necessary to substitute these characters before calculating.
-    // I've chosen to use multiple runs of the function for readability purposes.
     NSString* modifiedExpression = [expression stringByReplacingOccurrencesOfString:@"^" withString:@"**"];
-    modifiedExpression = [modifiedExpression stringByReplacingOccurrencesOfString:@"x" withString:@"*"];
+    modifiedExpression = [expression stringByReplacingOccurrencesOfString:@"π" withString:@"pi()"];
+    modifiedExpression = [expression stringByReplacingOccurrencesOfString:@"e" withString:@"e()"];
     NSString* result = [[modifiedExpression numberByEvaluatingString] stringValue];
     
     if ([result isEqualToString:@"inf"])

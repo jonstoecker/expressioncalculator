@@ -15,6 +15,9 @@
     IBOutlet UILabel* resultDisplay;
     IBOutlet UILabel* expressionDisplay;
     
+    UIScrollView* scrollView;
+    UIView* buttonPanel;
+    
     LogicModel* model;
     
     SystemSoundID clickSoundSSID;
@@ -23,11 +26,15 @@
     BOOL showingResult;
 }
 
+@property (nonatomic, retain) IBOutlet UIView* buttonPanel;
+@property (nonatomic, retain) IBOutlet UIScrollView* scrollView;
+
 -(IBAction)inputPressed:(id)sender;
 -(IBAction)equalsPressed:(id)sender;
 -(IBAction)deletePressed:(id)sender;
 -(IBAction)clearPressed:(id)sender;
 -(IBAction)operatorPressed:(id)sender;
+-(IBAction)functionPressed:(id)sender;
 
 extern NSString* const JSZeroStr;
 extern NSString* const JSEmptyStr;
