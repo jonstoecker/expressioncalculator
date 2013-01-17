@@ -27,7 +27,7 @@ min(2.4, 7, 5.95) will return 2.4.
 
 << is the backspace/delete key.
 
-& and | are bitwise and and bitwise or, respectively (results are currently displayed in base 10).
+& and | are bitwise (and) and bitwise (or), respectively (results are currently displayed in base 10).
 
 I expect to add persistent storage of past expressions shortly. I would eventually like to extend the calculator's
 functionality to include variables and an algebraic solver (this is more an issue of UI design than parser capability).
