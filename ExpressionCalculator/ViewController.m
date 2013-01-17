@@ -12,21 +12,26 @@
 
 // Private methods here:
 -(void)updateResultDisplay;
--(void)updateExpressionDisplay:(NSString*)expression;
+-(void)updateExpressionDisplayWith:(NSString*)expression;
 -(void)playSound;
 
 @end
 
 @implementation ViewController
-@synthesize numberButtons;
-@synthesize operationButtons;
-@synthesize equalsButton;
+@synthesize clearButton;
+
+//
+//  Defined message constants:
+//
+NSString* const JSZeroStr = @"0";
+NSString* const JSEmptyStr = @"";
+NSString* const JSSyntaxErrorMsg = @"syntax";
 
 //
 //  Checks for an instance of the model and initializes
 //  if necessary.
 //
--(LogicModel*)logicInit
+-(LogicModel*)logic
 {
     if (!model) {
         model = [[LogicModel alloc] init];
@@ -40,8 +45,11 @@
 -(IBAction)inputPressed:(UIButton*)sender
 {
     [self playSound];
-    [self updateExpressionDisplay: [[sender titleLabel] text]]; // <- this technically violates a strict interpretation of MVC...
-    [self updateResultDisplay];
+    if (showingResult) {
+        [self updateExpressionDisplayWith:JSEmptyStr];
+        showingResult = NO;
+    }
+    [self updateExpressionDisplayWith: [[sender titleLabel] text]]; // <- this technically violates a strict interpretation of MVC...
 }
 
 //
@@ -51,7 +59,13 @@
 -(IBAction)operatorPressed:(UIButton*)sender
 {
     [self playSound];
-    [self updateExpressionDisplay: [[sender titleLabel] text]];
+    if (showingResult) {
+        showingResult = NO;
+    }
+    else {
+        [self updateResultDisplay];
+    }
+    [self updateExpressionDisplayWith: [[sender titleLabel] text]];
 }
 
 //
@@ -61,11 +75,19 @@
 {
     [self playSound];
     
-    NSString* finalResult = [[self logicInit] calculateExpression: [expressionDisplay text] isFinal:YES];
+    NSString* finalResult;
+    
+    if ([[expressionDisplay text] isEqualToString:JSEmptyStr]) {
+        finalResult = JSZeroStr;
+    }
+    else {
+        finalResult = [[self logic] calculateExpression: [expressionDisplay text]];
+    }
+
     if (!finalResult) {
-        [resultDisplay setText:@"check syntax"];
+        [resultDisplay setText:JSSyntaxErrorMsg];
     } else {
-        [resultDisplay setText:finalResult];
+        [self updateResultDisplay];
         showingResult = YES;
     }
 }
@@ -80,9 +102,8 @@
     NSString* expression = [expressionDisplay text];
     if ([expression length] > 0) {
         [expressionDisplay setText:[expression substringToIndex:([expression length] - 1)]];
+        showingResult = NO;
     }
-    
-    [self updateResultDisplay];
 }
 
 //
@@ -91,18 +112,17 @@
 -(IBAction)clearPressed:(UIButton*)sender
 {
     [self playSound];
-    [expressionDisplay setText:@""];
-    [resultDisplay setText:@""];
+    [self updateExpressionDisplayWith:JSEmptyStr];
+    [self updateResultDisplay];
 }
 
 //
-//  Returns most recent expression calculated.
+//  Loads a menu of optional operations (trig et al).
 //
--(IBAction)recallPressed:(UIButton*)sender
+-(IBAction)optionPressed:(UIButton*)sender
 {
     [self playSound];
-    [expressionDisplay setText:[[self logicInit] recall]];
-    [self updateResultDisplay];
+    // implement the slide up option menu here
 }
 
 //
@@ -111,22 +131,27 @@
 //
 -(void)updateResultDisplay
 {
-    result = [[self logicInit] calculateExpression: [expressionDisplay text] isFinal:NO];
-    [resultDisplay setText:result];
+    NSString* expression = [[self logic] calculateExpression: [expressionDisplay text]];
+    
+    if (expression) {
+        [resultDisplay setText:[[self logic] calculateExpression: [expressionDisplay text]]];
+    }
+    else if ([[expressionDisplay text] isEqualToString:JSEmptyStr]){
+        [resultDisplay setText:JSZeroStr];
+    }
+
 }
 
 //
 //  Updates the expression scratchpad.
 //
--(void)updateExpressionDisplay:(NSString*)input
+-(void)updateExpressionDisplayWith:(NSString*)input
 {
-    if (showingResult) {
-        [expressionDisplay setText:@""];
-        [resultDisplay setText:@""];
-        showingResult = NO;
+    if ([input isEqualToString:JSEmptyStr]) {
+        [expressionDisplay setText:JSEmptyStr];
+    } else {
+        [expressionDisplay setText:[[expressionDisplay text] stringByAppendingString:input]];
     }
-    
-    [expressionDisplay setText:[[expressionDisplay text] stringByAppendingString:input]];
 }
 
 //
@@ -140,14 +165,6 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    // Initialize programmatic button gradients.
-    for (GradientButton* eachButton in numberButtons) {
-        [eachButton useBlackStyle];
-    }
-    for (GradientButton* eachButton in operationButtons) {
-        [eachButton useAlertStyle];
-    }
-    [equalsButton useSimpleOrangeStyle];
     
     // Sound (button click) initialization.
     NSURL* clickSoundURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/click.aiff",[[NSBundle mainBundle] resourcePath]]];
@@ -156,9 +173,7 @@
 
 -(void)viewDidUnload
 {
-    self.numberButtons = nil;
-    self.operationButtons = nil;
-    self.equalsButton = nil;
+
 }
 
 -(void)didReceiveMemoryWarning
@@ -170,9 +185,7 @@
 {
     AudioServicesDisposeSystemSoundID(clickSoundSSID);
     [model release];
-    [numberButtons release];
-    [operationButtons release];
-    [equalsButton release];
+    [clearButton release];
     [super dealloc];
 }
 

@@ -11,10 +11,12 @@
 
 @interface LogicModel : NSObject
 {
-    Stack* stack;
+@private
+    NSCharacterSet* replacementChars;
 }
 
--(NSString*)calculateExpression:(NSString*)expression isFinal:(BOOL)final;
--(NSString*)recall;
+-(NSString*)calculateExpression:(NSString*)expression;
+
+extern NSString* const JSErrorMsg;
 
 @end

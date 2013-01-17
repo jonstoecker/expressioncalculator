@@ -9,34 +9,30 @@
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import "LogicModel.h"
-#import "GradientButton.h"
 
 @interface ViewController : UIViewController
 {
     IBOutlet UILabel* resultDisplay;
     IBOutlet UILabel* expressionDisplay;
     
-    NSArray* numberButtons;
-    NSArray* operationButtons;
-    GradientButton* equalsButton;
-    
     LogicModel* model;
     
     SystemSoundID clickSoundSSID;
-
+    
 @private
     BOOL showingResult;
-    NSString* result;
 }
 
 -(IBAction)inputPressed:(id)sender;
 -(IBAction)equalsPressed:(id)sender;
 -(IBAction)deletePressed:(id)sender;
 -(IBAction)clearPressed:(id)sender;
--(IBAction)recallPressed:(id)sender;
+-(IBAction)optionPressed:(id)sender;
 
-@property (nonatomic, retain) IBOutletCollection(GradientButton) NSArray* numberButtons;
-@property (nonatomic, retain) IBOutletCollection(GradientButton) NSArray* operationButtons;
-@property (nonatomic, retain) IBOutlet GradientButton* equalsButton;
+@property (nonatomic, retain) IBOutlet UIButton* clearButton;
+
+extern NSString* const JSZeroStr;
+extern NSString* const JSEmptyStr;
+extern NSString* const JSSyntaxErrorMsg;
 
 @end

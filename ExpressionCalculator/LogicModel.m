@@ -13,40 +13,35 @@
 
 -(LogicModel*)init
 {
-    if (self = [super init]) {
-        stack = [[Stack alloc] init];
-    }
     return self;
 }
+//
+//  Defined constants
+//
+NSString* const JSErrorMsg = @"error";
+
 
 //
 //  Performs a calculation and returns the result as an NSString value
 //  suitable for displaying in the calculator's view window.
 //
--(NSString*)calculateExpression:(NSString*)expression isFinal:(BOOL)final
+-(NSString*)calculateExpression:(NSString*)expression
 {
-    // Parser expects ** instead of ^ for exponential calculations
-    // So, it's necessary to replace all instances of ^ with **
+    // Parser expects ** instead of ^ for exponential calculations and * instead of x for multiplication
+    // So, it's necessary to substitute these characters before calculating.
+    // I've chosen to use multiple runs of the function for readability purposes.
     NSString* modifiedExpression = [expression stringByReplacingOccurrencesOfString:@"^" withString:@"**"];
+    modifiedExpression = [modifiedExpression stringByReplacingOccurrencesOfString:@"x" withString:@"*"];
     NSString* result = [[modifiedExpression numberByEvaluatingString] stringValue];
     
-    if (final && result)
-        [stack push:modifiedExpression];
+    if ([result isEqualToString:@"inf"])
+        result = JSErrorMsg;
     
     return result;
 }
 
-//
-//  Pulls the most recent expression from the stack and returns it.
-//
--(NSString*)recall
-{
-    return [stack pop];
-}
-
 -(void)dealloc
 {
-    [stack release];
     [super dealloc];
 }
 
