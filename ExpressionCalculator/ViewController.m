@@ -18,7 +18,6 @@
 @end
 
 @implementation ViewController
-@synthesize clearButton;
 
 //
 //  Defined message constants:
@@ -185,7 +184,8 @@ NSString* const JSSyntaxErrorMsg = @"syntax";
 {
     AudioServicesDisposeSystemSoundID(clickSoundSSID);
     [model release];
-    [clearButton release];
+
+    [expressionDisplay release];
     [super dealloc];
 }
 

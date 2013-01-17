@@ -27,9 +27,7 @@
 -(IBAction)equalsPressed:(id)sender;
 -(IBAction)deletePressed:(id)sender;
 -(IBAction)clearPressed:(id)sender;
--(IBAction)optionPressed:(id)sender;
-
-@property (nonatomic, retain) IBOutlet UIButton* clearButton;
+-(IBAction)operatorPressed:(id)sender;
 
 extern NSString* const JSZeroStr;
 extern NSString* const JSEmptyStr;

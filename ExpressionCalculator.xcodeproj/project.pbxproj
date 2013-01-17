@@ -11,7 +11,6 @@
 		FC371AD816A77D790035283B /* numButtons@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC371AD616A77D790035283B /* numButtons@2x.png */; };
 		FC371AD916A77D790035283B /* opButtons@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC371AD716A77D790035283B /* opButtons@2x.png */; };
 		FC371ADB16A77DCD0035283B /* eqButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC371ADA16A77DCD0035283B /* eqButton@2x.png */; };
-		FC371B0D16A81F2B0035283B /* CalculatorWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC371B0C16A81F2B0035283B /* CalculatorWindow.xib */; };
 		FC63184D16A39C87000ABE27 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC63184C16A39C87000ABE27 /* AudioToolbox.framework */; };
 		FCCCB75716A408A0003BCE57 /* _DDFunctionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB72D16A408A0003BCE57 /* _DDFunctionContainer.m */; };
 		FCCCB75816A408A0003BCE57 /* _DDFunctionExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCCB72F16A408A0003BCE57 /* _DDFunctionExpression.m */; };
@@ -54,7 +53,6 @@
 		FC371AD616A77D790035283B /* numButtons@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "numButtons@2x.png"; path = "resources/graphics/numButtons@2x.png"; sourceTree = "<group>"; };
 		FC371AD716A77D790035283B /* opButtons@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "opButtons@2x.png"; path = "resources/graphics/opButtons@2x.png"; sourceTree = "<group>"; };
 		FC371ADA16A77DCD0035283B /* eqButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "eqButton@2x.png"; path = "resources/graphics/eqButton@2x.png"; sourceTree = "<group>"; };
-		FC371B0C16A81F2B0035283B /* CalculatorWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorWindow.xib; sourceTree = "<group>"; };
 		FC63184C16A39C87000ABE27 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FCCCB72C16A408A0003BCE57 /* _DDFunctionContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _DDFunctionContainer.h; path = "expression parser/_DDFunctionContainer.h"; sourceTree = "<group>"; };
 		FCCCB72D16A408A0003BCE57 /* _DDFunctionContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _DDFunctionContainer.m; path = "expression parser/_DDFunctionContainer.m"; sourceTree = "<group>"; };
@@ -254,7 +252,6 @@
 				FCDCB67F16A3693D00DEDAA7 /* AppDelegate.m */,
 				FCDCB68716A3693D00DEDAA7 /* ViewController.h */,
 				FCDCB68816A3693D00DEDAA7 /* ViewController.m */,
-				FC371B0C16A81F2B0035283B /* CalculatorWindow.xib */,
 				FCDCB68A16A3693D00DEDAA7 /* ViewController_iPhone.xib */,
 				FCDCB69516A36A4000DEDAA7 /* LogicModel.h */,
 				FCDCB69616A36A4000DEDAA7 /* LogicModel.m */,
@@ -339,7 +336,6 @@
 				FC371AD816A77D790035283B /* numButtons@2x.png in Resources */,
 				FC371AD916A77D790035283B /* opButtons@2x.png in Resources */,
 				FC371ADB16A77DCD0035283B /* eqButton@2x.png in Resources */,
-				FC371B0D16A81F2B0035283B /* CalculatorWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

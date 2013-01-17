@@ -11,8 +11,7 @@
 
 @interface LogicModel : NSObject
 {
-@private
-    NSCharacterSet* replacementChars;
+
 }
 
 -(NSString*)calculateExpression:(NSString*)expression;
